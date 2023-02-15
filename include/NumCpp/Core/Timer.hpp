@@ -89,7 +89,9 @@ namespace nc
         ///
         void sleep(uint32 length)
         {
-            std::this_thread::sleep_for(TimeUnit(length));
+            // This function does not work with our ARM compiler. It has been commented out.
+            throw;
+            // std::this_thread::sleep_for(TimeUnit(length));
         }
 
         //============================================================================
