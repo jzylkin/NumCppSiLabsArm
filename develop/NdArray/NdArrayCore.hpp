@@ -263,7 +263,10 @@ namespace nc_develop
         // Method Description:
         ///	Destructor
         ///
-        ~NdArray() = default;
+        ~NdArray()
+        {
+            allocator_.deallocate(_array);
+        }
 
         //============================================================================
         // Method Description:
