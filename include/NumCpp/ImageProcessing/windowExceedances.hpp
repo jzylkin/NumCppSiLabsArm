@@ -75,7 +75,9 @@ namespace nc
 //                }
 //            }
 
-            throw;
+            // This function does not compile correctly. It is disabled, and always returns an empty window array.
+            NdArray<bool> xcds;
+            return xcds;
         }
     } // namespace imageProcessing
 } // namespace nc
